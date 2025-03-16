@@ -1,9 +1,12 @@
 import React from 'react'
+import { Button } from './components/ui/button'
 
 const page = () => {
   return (
-    <div>Hello Next.js</div>
-  )
+    <div>
+      <Button>Next.js</Button>{" "}
+    </div>
+  );
 }
 
 export default page 
