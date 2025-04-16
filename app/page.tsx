@@ -1,6 +1,7 @@
 
 import React from "react";
 import ProductInfo from "./ProductInfo";
+import NumbersList from "./NumbersList";
 
 
 
@@ -16,7 +17,8 @@ const page = () => {
 
       <p>Date: {date.getDate()} </p>
 
-      <ProductInfo/>
+      <ProductInfo />
+      <NumbersList/>
 
 
     </div>
