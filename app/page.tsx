@@ -1,9 +1,9 @@
 
+import Users from "./components/Users";
 import React from "react";
 
 
 
-{/*  Props   */ }
 
 
 
@@ -14,7 +14,11 @@ const page = () => {
 
   return (
 
-    <div>Hello</div>
+    // <Users name="pushkar" age={21} isStudent={true} />
+
+    <Users> 
+      <p>Hello</p>
+    </Users>
 
   );
 };
