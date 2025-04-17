@@ -1,36 +1,31 @@
-
-"use client"
-
-import CustomButton from "./components/CustomButton";
-import Users from "./components/Users";
 import React from "react";
+import UserInfo from "./components/UserInfo";
+import AdminInfo from "./components/AdminInfo";
+import { AdminInfoList, Info } from "./types";
 
-
-
-
-
-
+// Reusable Prop Typing
 
 const page = () => {
+  const userInfo: Info = {
+    name: "new string",
+    email: "string.goc.iw",
+    id: "iuoa",
+  };
 
-  const Line:string = "You clicked this button"
+  const admin: AdminInfoList = {
+    name: "your admin",
+    email: "admin.sup.in",
+    id: "gin",
+    adminStatus: true,
+    lastLogin: new Date(),
+    role: "Admin",
+  };
 
   return (
     <div>
-      <Users name="pushkar" age={21} isStudent={true} />
-
-
-      <CustomButton label="Click" onClick={() => (console.log(`Clicked ${Line}`))} disabledState={false} />
-
-
-      {/* //{" "}
-      <Users>
-        // <p>Hello</p>
-        //{" "} */}
-      
+      <UserInfo user={userInfo} />
+      <AdminInfo admin={admin} />
     </div>
-    
-
   );
 };
 
