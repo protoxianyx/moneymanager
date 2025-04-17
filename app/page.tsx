@@ -24,6 +24,9 @@ const page = () => {
   return (
     <div>
       <UserInfo user={userInfo} />
+      <br />
+      <p>------------------------------------------------------------</p>
+      <br />
       <AdminInfo admin={admin} />
     </div>
   );

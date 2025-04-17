@@ -6,7 +6,13 @@ type UserInfoProp = {
 };
 
 const UserInfo: React.FC<UserInfoProp> = ({ user }) => {
-  return <div>{user.name}</div>;
+  return (
+    <div>
+      name: {user.name} <br />
+      id: {user.id} <br />
+      email: {user.email} <br />
+    </div>
+  );
 };
 
 export default UserInfo;
