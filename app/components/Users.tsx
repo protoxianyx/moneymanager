@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { FC } from "react";
 
 // type UserShape = {
 //   name: string;
@@ -6,16 +6,15 @@ import React, { ReactNode } from "react";
 //   isStudent: boolean;
 // };
 
-// interface UserShape {
-//   name: string;
-//   age: number;
-//   isStudent: boolean;
-// }
-
 interface UserShape {
-children: ReactNode
+  name: string;
+  age: number;
+  isStudent: boolean;
 }
 
+// interface UserShape {
+// children: ReactNode
+// }
 
 // const Users = ({ name, age, isStudent }: UserShape) => {
 //   return (
@@ -27,15 +26,14 @@ children: ReactNode
 //   );
 // };
 
-
-const Users = ({ children }: UserShape) => {
+const Users: FC<UserShape> = ({ name, age, isStudent }) => {
   return (
-      <div>
-          <h1>{children}</h1>
-
+    <div>
+      <h1>
+        {name} , {age}, {isStudent ? "This is a student" : "False"}
+      </h1>
     </div>
   );
 };
-
 
 export default Users;

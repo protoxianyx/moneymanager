@@ -14,11 +14,11 @@ const page = () => {
 
   return (
 
-    // <Users name="pushkar" age={21} isStudent={true} />
+    <Users name="pushkar" age={21} isStudent={true} />
 
-    <Users> 
-      <p>Hello</p>
-    </Users>
+    // <Users> 
+    //   <p>Hello</p>
+    // </Users>
 
   );
 };
