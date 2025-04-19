@@ -61,6 +61,7 @@ const UserProfile = () => {
       <p>Name: {profile.name}</p>
       <p>Age:{profile.age}</p>
       <p>Email:{profile.email}</p>
+      <p>New Line for Branch testing</p>
     </div>
   );
 };
