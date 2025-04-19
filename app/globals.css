@@ -81,6 +81,10 @@
   --foreground: oklch(0.141 0.005 285.823);
 }
 
+@utility newborder {
+  @apply border-2 border-black my-2 mx-1
+}
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
