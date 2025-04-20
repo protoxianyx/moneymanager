@@ -21,14 +21,6 @@ const TodoList = () => {
   //     setRow((table) => ({ ...table, row }));
   //   };
 
-  const [todos, setTodos] = useState<Todos[]>([]);
-
-  addTodo = (task: string) => {
-    const newTodo: Todos = {
-      id: todos.length + 1,
-      task,
-    };
-  };
 
   return (
     <div>
