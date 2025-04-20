@@ -6,11 +6,7 @@ import React, { useState } from "react";
 //   task: string[];
 // }
 
-interface Todos {
-  id: number;
-  task: string;
-  completed: boolean;
-}
+
 
 const TodoList = () => {
   //   const [row, setRow] = useState<TaskTable>({
@@ -21,14 +17,6 @@ const TodoList = () => {
   //     setRow((table) => ({ ...table, row }));
   //   };
 
-  const [todos, setTodos] = useState<Todos[]>([]);
-
-  addTodo = (task: string) => {
-    const newTodo: Todos = {
-      id: todos.length + 1,
-      task,
-    };
-  };
 
   return (
     <div>
