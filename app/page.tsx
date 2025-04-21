@@ -2,6 +2,7 @@ import React from "react";
 import Counter from "./components/Counter";
 import UserProfile from "./components/UserProfile";
 import TodoList from "./components/TodoList";
+import Form from "./components/Form";
 
 const page = () => {
   return (
@@ -11,7 +12,9 @@ const page = () => {
       <br />
       <hr />
       <br />
-      <TodoList/>
+      <TodoList />
+      <br />
+      <Form/>
     </div>
   );
 };
