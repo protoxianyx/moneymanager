@@ -23,17 +23,33 @@ const TodoList = () => {
 
   const [todos, setTodos] = useState<Todos[]>([]);
 
-  addTodo = (task: string) => {
+  const addTodo = (task: string) => {
     const newTodo: Todos = {
       id: todos.length + 1,
       task,
+      completed: false,
     };
+
+    setTodos((previousTodos) => [...previousTodos, newTodo]);
   };
 
   return (
     <div>
       <h1>Enter the task:</h1>
-      <button className="newborder hover:bg-amber-200">Add todo</button>
+      <button
+        onClick={() => addTodo("New Todo")}
+        className="newborder hover:bg-amber-200"
+      >
+        Add todo
+      </button>
+      <ul>
+        {todos.map((todo) => (
+          <li key={todo.id}>
+            {todo.task} {todo.completed ? "Completed" : "Not Completed"}
+          </li>
+        ))}
+      </ul>
+
       {/* <input
         type="text"
         placeholder="Enter the task"

@@ -16,7 +16,7 @@ const UserProfile = () => {
   });
 
   const updateName = (name: string) => {
-    setProfile((previousProfile) => ({ ...previousProfile, name:name }));
+    setProfile((previousProfile) => ({ ...previousProfile, name: name }));
   };
 
   const updateAge = (age: string) => {
@@ -61,7 +61,6 @@ const UserProfile = () => {
       <p>Name: {profile.name}</p>
       <p>Age:{profile.age}</p>
       <p>Email:{profile.email}</p>
-      <p>New Line for Branch testing</p>
     </div>
   );
 };

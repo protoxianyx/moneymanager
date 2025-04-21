@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["oklch"]
+  "cSpell.words": ["oklch"],
+  "sarif-viewer.connectToGithubCodeScanning": "off"
 }
