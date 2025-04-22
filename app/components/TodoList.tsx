@@ -50,15 +50,7 @@ const TodoList = () => {
         ))}
       </ul>
 
-      {/* <input
-        type="text"
-        placeholder="Enter the task"
-        className="newborder"
-        value={row.task.push()}
-        onChange={(e) => addrow(e.target.value)}
-          />
-          
-          <p>{row.task.map(()=>(row.task))}</p> */}
+
     </div>
   );
 };
