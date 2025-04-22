@@ -48,7 +48,7 @@ const Form = () => {
         className="m-1"
       />
       <input
-        type="text"
+        type="password"
         placeholder="Enter your password"
         ref={password}
         className="m-1"
