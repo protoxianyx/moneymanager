@@ -1,14 +1,10 @@
+import Link from "next/link";
 import React from "react";
 
-
-
 const page = () => {
-  return (
-    <div>
-      
-      <p>Branch test 2 new</p>
-    </div>
-  );
+  return <div>
+    <Link href={"/Todo"}>Hello</Link>
+  </div>;
 };
 
 export default page;
