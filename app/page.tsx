@@ -1,8 +1,8 @@
 import React from "react";
-import Counter from "./components/Counter";
-import UserProfile from "./components/UserProfile";
-import TodoList from "./components/TodoList";
-import Form from "./components/Form";
+import Counter from "./components/LastExersize/Counter";
+import UserProfile from "./components/LastExersize/UserProfile";
+import TodoList from "./components/LastExersize/TodoList";
+import Form from "./components/LastExersize/Form";
 
 const page = () => {
   return (
