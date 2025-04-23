@@ -1,8 +1,13 @@
 import React from 'react'
+// import ContactForm from '../components/UserefComponents/ContactForm'
+import EventHandling from '@/components/UserefComponents/EventHandling'
 
 const UseRef = () => {
   return (
-    <div>UseRef</div>
+    <div>
+      {/* <ContactForm/> */}
+      <EventHandling/>
+    </div>
   )
 }
 
