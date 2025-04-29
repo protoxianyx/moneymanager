@@ -1,14 +1,21 @@
-"use client"
+"use client";
 
-import React from "react";
+import React, { useState } from "react";
+
+interface Task {
+  id: string
+  task:string
+}
 
 const TodoList = () => {
 
-  const handleSubmit = () => {
-    return "handle"
-  }
+  const [data, setData] = useState<Task[]>([])
 
-  const  arr:number[] = [1,2,3,4,5,6]
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
+
+  const arr: number[] = [1, 2, 3, 4, 5, 6];
 
   return (
     <div>
@@ -26,8 +33,8 @@ const TodoList = () => {
 
         <div className="border-2 bg-amber-200 border-black px-2 py-1">
           <ul>
-            {arr.map(arr => (
-              <li key={Math.random.length}>{arr}</li>
+            {arr.map((arr) => (
+              <li key={Math.random() * 100}>{arr}</li>
             ))}
           </ul>
         </div>
