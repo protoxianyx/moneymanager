@@ -3,19 +3,30 @@
 import React, { useState } from "react";
 
 interface Task {
-  id: string
+  id: number
   task:string
 }
 
 const TodoList = () => {
 
-  const [data, setData] = useState<Task[]>([])
+  const [data, setData] = useState<Task[]>([]);
+  const [input, setInput] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (input.trim() === '') return;
+
+    const addedTask: Task = {
+      id: Math.random() * 100, 
+      task: input.trim()
+    }
+
+    setData(prev => [...prev, addedTask])
+    setInput('')
+    
   };
 
-  const arr: number[] = [1, 2, 3, 4, 5, 6];
 
   return (
     <div>
@@ -26,6 +37,8 @@ const TodoList = () => {
               type="text"
               placeholder="Input Task"
               className="border-none bg-amber-300 m-2"
+              value={input}
+              onChange={e => setInput(e.target.value)}
             />
             <button>Submit</button>
           </form>
@@ -33,8 +46,8 @@ const TodoList = () => {
 
         <div className="border-2 bg-amber-200 border-black px-2 py-1">
           <ul>
-            {arr.map((arr) => (
-              <li key={Math.random() * 100}>{arr}</li>
+            {data.map((task) => (
+              <li key={task.id}>{task.task}</li>
             ))}
           </ul>
         </div>
