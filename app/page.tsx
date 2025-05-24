@@ -1,12 +1,15 @@
+import Link from "next/link";
 import React from "react";
-import InsertRow from "./components/InsertRow";
-
 
 const page = () => {
   return (
-    <div>
-      <InsertRow />
-      <p>Branch test 2</p>
+    <div className="flex items-center justify-center m-10">
+      <Link
+        href={"/Todo"}
+        className="border-2 border-black hover:bg-accent bg-emerald-400 rounded-xs py-2 px-10 m-2"
+      >
+        Todo Page
+      </Link>
     </div>
   );
 };
