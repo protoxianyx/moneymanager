@@ -14,6 +14,13 @@ const Navbar = () => {
       >
         Todo
       </Link>
+
+      <Link
+        href={"/moneymanager"}
+        className="px-2 border-2 border-black rounded-xs mx-1"
+      >
+        Money Manager
+      </Link>
     </div>
   );
 };
