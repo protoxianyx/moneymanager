@@ -23,7 +23,7 @@ const MoneyManager = () => {
         <TableCaption>Money Manager Table</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]">Transaction Type</TableHead>
+            <TableHead className="w-[100px] ">Transaction Type</TableHead>
             <TableHead className="w-[300px]">Spent/Added</TableHead>
             <TableHead>Note</TableHead>
           </TableRow>
@@ -32,7 +32,7 @@ const MoneyManager = () => {
         <TableBody>
           <TableRow>
             <TableCell>
-              <MMLabel/>
+              <MMLabel  />
             </TableCell>
           </TableRow>
         </TableBody>
