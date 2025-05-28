@@ -23,6 +23,12 @@ const page = () => {
       >
         Money Manager
       </Link>
+      <Link
+        href={"/TextEditor"}
+        className="border-2 border-black hover:bg-accent bg-emerald-400 rounded-xs py-2 px-10 m-2"
+      >
+        Text Editor
+      </Link>
     </div>
   );
 };
