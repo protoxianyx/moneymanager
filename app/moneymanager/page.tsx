@@ -2,7 +2,7 @@ import React from 'react'
 
 const MoneyManager = () => {
   return (
-    <div>MoneyManager</div>
+    <div>MoneyManager TEst</div>
   )
 }
 
