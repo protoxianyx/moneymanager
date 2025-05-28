@@ -9,6 +9,7 @@ import {
   TableCell,
   TableHead,
   TableRow,
+  TableHeader
 } from "../ui/table";
 
 interface Task {
@@ -66,12 +67,12 @@ const TodoList = () => {
           <div>
             <Table>
               <TableCaption>Task Table</TableCaption>
-              <TableHead>
+              <TableHeader>
                 <TableRow>
                   <TableHead>No.</TableHead>
                   <TableHead className="text-center">Task</TableHead>
                 </TableRow>
-              </TableHead>
+              </TableHeader>
               <TableBody>
                 {data.map((task) => (
                   <TableRow key={task.id}>
