@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import Holder from "./Holder";
+import { Table, TableCaption } from "../ui/table";
 
 interface Task {
-  id: number
+  id: string
   task:string
 }
 
@@ -11,6 +13,7 @@ const TodoList = () => {
 
   const [data, setData] = useState<Task[]>([]);
   const [input, setInput] = useState("");
+  const [numerator, setNumerator] = useState(1);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,12 +21,13 @@ const TodoList = () => {
     if (input.trim() === '') return;
 
     const addedTask: Task = {
-      id: Math.random() * 100, 
+      id: Math.floor(Math.random() * 1e6).toString(), 
       task: input.trim()
     }
 
     setData(prev => [...prev, addedTask])
     setInput('')
+    setNumerator(numerator+1)
     
   };
 
@@ -47,9 +51,14 @@ const TodoList = () => {
         <div className="border-2 bg-amber-200 border-black px-2 py-1">
           <ul>
             {data.map((task) => (
-              <li key={task.id}>{task.task}</li>
+              <li key={task.id}> <Holder numerator={numerator} task={task.task} /> </li>
             ))}
           </ul>
+        </div>
+        <div>
+          <Table>
+            <TableCaption>Task Table</TableCaption>
+          </Table>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ const page = () => {
       </Link>
 
       <Link
-        href={"/Todo"}
+        href={"/moneymanager"}
         className="border-2 border-black hover:bg-accent bg-emerald-400 rounded-xs py-2 px-10 m-2"
       >
         Money Manager
