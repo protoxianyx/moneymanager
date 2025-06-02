@@ -12,9 +12,19 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useSelectionStore } from "@/lib/selectionStore";
+
+
 
 export function MMRadioGroup() {
-  const [position, setPosition] = React.useState("bottom");
+  const [position, setPosition] = React.useState("Choose Tag");
+
+  const setSelected = useSelectionStore((state) => state.setSelected)
+
+  const handleChange = (position: string) => {
+    setPosition(position)
+    setSelected(position)
+  }
 
   return (
     <DropdownMenu>
@@ -24,7 +34,7 @@ export function MMRadioGroup() {
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel>Transaction Type Tag</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
+        <DropdownMenuRadioGroup value={position} onValueChange={handleChange} >
           <DropdownMenuRadioItem value="Spent">Spent</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="Added">Added</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>

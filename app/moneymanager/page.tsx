@@ -32,7 +32,7 @@ const MoneyManager = () => {
         <TableBody>
           <TableRow>
             <TableCell>
-              <MMLabel  />
+              <MMLabel />
             </TableCell>
           </TableRow>
         </TableBody>
