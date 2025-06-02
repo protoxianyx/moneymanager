@@ -1,8 +1,11 @@
+import WriterArea from '@/components/TECompoments/WriterArea'
 import React from 'react'
 
 const TextEditor = () => {
   return (
-    <div>TextEditor</div>
+    <div>
+      <WriterArea/>
+    </div>
   )
 }
 
