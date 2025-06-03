@@ -21,6 +21,13 @@ const Navbar = () => {
       >
         Money Manager
       </Link>
+
+      <Link
+        href={"/TextEditor"}
+        className="px-2 border-2 border-black rounded-xs mx-1"
+      >
+        Text Editor
+      </Link>
     </div>
   );
 };
