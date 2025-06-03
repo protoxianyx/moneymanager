@@ -1,25 +1,25 @@
 "use client"
 
-import React, { useRef, useState } from "react";
+// import React, { useRef, useState } from "react";
 
 const WriterArea = () => {
 
-    const editorRef = useRef(null);
-    const [html, setHtml] = useState("<p>Type here...</p>");
+    // const editorRef = useRef(null);
+    // const [html, setHtml] = useState("<p>Type here...</p>");
 
   const handleInput = () => {
-    setHtml(editorRef.current.innerHTML);
+    // setHtml(editorRef.current.innerHTML);
   };
 
   return (
     <div
-      contentEditable="true"
+      // contentEditable="true"
       className=" border"
       onInput={handleInput}
-      ref={editorRef}
-      dangerouslySetInnerHTML={{ __html: html }}
+      // ref={editorRef}
+      // dangerouslySetInnerHTML={{ __html: html }}
     >
-      {html}
+      {/* {html} */} j
     </div>
   );
 };
