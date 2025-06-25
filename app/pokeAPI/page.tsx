@@ -2,7 +2,7 @@ import React from 'react'
 
 const PokeAPI = () => {
   return (
-    <div>PokeAPI</div>
+    <div>PokeAPI: this page will be for trying out APIs</div>
   )
 }
 
