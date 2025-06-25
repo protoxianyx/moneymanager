@@ -21,6 +21,12 @@ const Navbar = () => {
       >
         Money Manager
       </Link>
+      <Link
+        href={"/pokeAPI"}
+        className="px-2 border-2 border-black rounded-xs mx-1"
+      >
+        Pokemon API
+      </Link>
     </div>
   );
 };
